@@ -25,8 +25,8 @@ public class CFCryptoTest
     public static void setUpClass() throws Exception
     {
         cfCrypto = new CFCrypto();
-        publicKeyFile = new File("test/resources/publickey.der");
-        privateKeyFile = new File("test/resources/private.der");
+        publicKeyFile = new File("test/publickey.der");
+        privateKeyFile = new File("test/private.der");
 
         // generate the key pair
         KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
@@ -61,7 +61,7 @@ public class CFCryptoTest
     @Test
     public void testSaveKey() throws Exception
     {
-        encryptedKeyFile = new File("test/resources/encryptedKey");
+        encryptedKeyFile = new File("test/encryptedKey");
         cfCrypto.saveKey(encryptedKeyFile, publicKeyFile);
         assertTrue(encryptedKeyFile.isFile());
     }

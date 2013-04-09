@@ -25,9 +25,9 @@ public class CFCryptoWrapperTest
     @BeforeClass
     public static void setUpClass() throws Exception
     {
-        publicKeyFile = new File("test/resources/publickey.der");
-        privateKeyFile = new File("test/resources/private.der");
-        encryptedKeyFile = new File("test/resources/encryptedKey");
+        publicKeyFile = new File("test/publickey.der");
+        privateKeyFile = new File("test/private.der");
+        encryptedKeyFile = new File("test/encryptedKey");
 
         // generate the key pair
         KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
